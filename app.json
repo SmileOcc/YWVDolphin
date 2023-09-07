@@ -9,8 +9,8 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff6700",
-    "navigationBarTitleText": "海豚计划",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "海豚计划"
   },
   "tabBar": {
     "selectedColor": "#ff6700",
