@@ -48,6 +48,22 @@ Page({
       url: "../search/search"
     })
   },
+
+  actionActivity(e){
+    let {id} = e.currentTarget.dataset
+    console.log(id)
+    wx.navigateTo({
+      url: `../activityDetail/activityDetail?id=${id}`,
+    })
+  },
+
+  actionThemeActivity(e) {
+    let {id} = e.target.dataset
+    console.log(id)
+    wx.navigateTo({
+      url: `../activityDetail/activityDetail?id=${id}`,
+    })
+  },
   // showDetail(e){
   //   const id=e.currentTarget.dataset.pid;
   //   console.log(id);

@@ -13,6 +13,8 @@ page{
   width: 100%; 
   box-sizing: border-box;
 } 
+
+/* 内容超过一屏时，scroll-view产生滚动条，嗯，这严重影响美观，通过以下样式隐藏 */
 /*隐藏滚动条*/
 ::-webkit-scrollbar{    
   height: 0;

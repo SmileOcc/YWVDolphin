@@ -1,0 +1,6 @@
+<!--pages/other/testMarage/testMarage.wxml-->
+<view class="container">
+  <view class="box example1 tFont">margin-top: 50px; margin-bottom: 50px; </view>
+  <view class="box example2 tFont">margin-top: 20px; margin-bottom: 20px;</view>
+  <view class="box example3 tFont">margin-top: 3em; margin-bottom: 3em;</view>
+</view>

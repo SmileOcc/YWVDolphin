@@ -1,28 +1,28 @@
 export default {
     index_slides: [{
             id: 1,
-            slide_url: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/37dfdc929ee9a4313facb0b23ebcd721.jpg?thumb=1&w=720&h=360"
+            slide_url: "https://img1.baidu.com/it/u=2033016601,629214176&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281"
         },
         {
             id: 2,
-            slide_url: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b51889744910df7979a2f672434da84e.jpg?thumb=1&w=720&h=360"
+            slide_url: "https://img0.baidu.com/it/u=2004023093,2326855154&fm=253&fmt=auto&app=138&f=JPEG?w=785&h=500"
         },
         {
             id: 100001,
-            slide_url: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a0ff3dc30027f3b615bfe03f1d306ee5.jpg?thumb=1&w=720&h=360"
+            slide_url: "https://img0.baidu.com/it/u=3229914479,1881496573&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800"
         },
         {
             id: 31,
-            slide_url: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/2320573b3be643e29f5270a97e1a9c1d.jpg?thumb=1&w=720&h=360"
+            slide_url: "https://img0.baidu.com/it/u=4191415742,2505248862&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"
         }
     ],
     nav_data: [{
-            nav_urls: "../channel/phone/phone",
+            nav_urls: "/pages/activityList/activityList",
             nav_img: "../../assets/nav_img/phone.png",
             nav_title: "手机"
         },
         {
-            nav_urls: "../channel/tv/tv",
+            nav_urls: "/pages/activityList/activityList",
             nav_img: "../../assets/nav_img/tv.png",
             nav_title: "电视"
         },

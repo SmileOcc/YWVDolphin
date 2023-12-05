@@ -3,16 +3,18 @@
   width: 100%;
 }
 .searchBar{
+  /* 它能够扩展和收缩 flex 容器内的元素，以最大限度地填充可用空间 */
   display: flex;
+  /* justify-content属性定义了项目在主轴上的对齐方式 */
   justify-content: center;
   height: 100rpx;
-  background: #ff6700;
+  background: #8CC64A;
 }
 .searchBar .searBar-box{
   display: inline-block;
   width: 95%;
   height: 60rpx;
-  margin-top: 26rpx;
+  margin-top: 20rpx;
   border-radius: 40rpx;
   background: #fff;
 }
@@ -21,13 +23,14 @@
 }
 .search-plac{
   text-align: center;
-  font-size: 11rpx;
+  font-size: 20rpx;
   margin-top: 4rpx;
+  /* background-color: #ff4a00; */
 }
 .searBar-box .search-icon{
   position: absolute;
   left: 36%;
-  top: 35rpx;
+  top: 28rpx;
   width: 44rpx;
   height: 44rpx;
 }
@@ -52,14 +55,14 @@
   justify-content: center;
   align-items: center;
   height: 160rpx;
-  background: #fff;
+  background: rgb(119, 57, 57);
 }
 .nav-list{
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 .nav-item{
   display: -webkit-box;
@@ -86,17 +89,19 @@
   display: flex;
   flex-direction: column;
   margin-top: 6rpx;
+  background-color: aquamarine;
 }
 .activity.up{
   display: flex;
   flex-direction: row;
   height: 490rpx;
   width: 100%;
-  background: #fff;
+  background: rgb(9, 71, 112);
 }
 .left-list{
   height: 490rpx;
   width: 358rpx;
+  background-color: bisque;
 }
 .left-list image{
   display: inline-block;

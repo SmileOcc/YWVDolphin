@@ -4,7 +4,13 @@
     "pages/mine/mine",
     "pages/cart/cart",
     "pages/categories/categories",
-    "pages/discovery/discovery"
+    "pages/discovery/discovery",
+    "pages/other/testMarage/testMarage",
+    "pages/other/testList/testList",
+    "pages/activityList/activityList",
+    "pages/activityDetail/activityDetail",
+    "pages/mine/setting/setting",
+    "pages/goodsDetail/goodsDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
