@@ -1,2 +1,5 @@
 <!--pages/mine/setting/setting.wxml-->
-<text>pages/mine/setting/setting.wxml</text>
+<view>
+<button plain="true" catch:tap="requestTest">网络请求</button>
+<button plain="true" catch:tap="requestTestt">网络请求</button>
+</view>

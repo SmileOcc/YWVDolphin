@@ -15,7 +15,17 @@ Page({
     index_activity:[],
     index_block:[],
     isTap:false,
-    isLoading:false
+    isLoading:false,
+    menu_list:[
+      {id:"x",img:"../../assets/nav_img/phone.png",title:"分类1",path:""},
+      {id:"x",img:"../../assets/nav_img/phone.png",title:"分类2",path:""},
+      {id:"x",img:"../../assets/nav_img/phone.png",title:"分类3",path:""},
+      {id:"x",img:"../../assets/nav_img/phone.png",title:"分类4",path:""},
+      {id:"x",img:"../../assets/nav_img/phone.png",title:"分类5",path:""},
+      {id:"x",img:"../../assets/nav_img/phone.png",title:"分类6",path:""},
+      {id:"x",img:"../../assets/nav_img/phone.png",title:"分类7",path:""},
+      // {id:"x",img:"../../assets/nav_img/phone.png",title:"分类8",path:""}
+    ],
   },
   onLoad(){
     const index_slides=app.globalData.index_slides,
@@ -64,10 +74,26 @@ Page({
       url: `../activityDetail/activityDetail?id=${id}`,
     })
   },
+
+  
   // showDetail(e){
   //   const id=e.currentTarget.dataset.pid;
   //   console.log(id);
   // }
   showDetail,
-  showcDetail
+  showcDetail,
+
+  categoryTap(e) {
+    let info = e.currentTarget.dataset.info
+    console.log(info)
+    
+    // wx.showLoading({
+    //   title: 'title',
+    // })
+
+    wx.showToast({
+      title: info.title,
+      icon:null
+    })
+  }
 })

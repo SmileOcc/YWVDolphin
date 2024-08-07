@@ -1,4 +1,7 @@
 // pages/mine/setting/setting.js
+
+import WxReq from "../../../utils/wxRequest";
+
 Page({
 
   /**
@@ -62,5 +65,21 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  async requestTest() {
+    const res = await WxReq.get("hotelList",null,null);
+    console.log(res)
+  },
+
+  requestTestt() {
+
+    // 通过 then 和 catch 接收返回的值
+    WxReq.get("hotelList",null,null).then((res) => {
+      console.log(res)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
   }
 })
