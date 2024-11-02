@@ -1,0 +1,94 @@
+<!--pages/mine/testLayout/textLayout.wxml-->
+
+<view style="display: flex; align-items: center;justify-content: center;width: 100%; height: 50px; background-color: rgb(112, 212, 212);">
+  <text style="background-color: bisque;">水平垂直居中</text>
+</view>
+
+<view style="display: table-cell; vertical-align: middle; width: 100%; height: 50px; background-color: rgb(89, 90, 124);">
+  <text style="margin:0 auto; background-color: bisque;">水平垂直居中（方式三推荐）</text>
+</view>
+
+
+
+<view style="position: relative; width: 100%; height: 50px; background-color: rgb(190, 35, 190);">
+  <text style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background-color: bisque;">水平垂直居中</text>
+</view>
+
+
+<view style="margin: 0 auto; text-align: center; width: 100%; height: 50px; background-color: rgb(149, 190, 35);">
+  <text style="background-color: bisque;">水平居中</text>
+</view>
+
+
+<view style="padding: 13px;">
+  <text style="background-color: beige; font-size: 13px;">
+    水平居中
+
+    inline元素：text-align: center
+    block元素：margin: 0 auto
+    absolute元素：left: 50% + margin-left负值(值为该元素宽度的一半)
+    absolute元素：left: 50% + transform: translateX（-50%)
+    垂直居中
+
+    inline元素：line-height的值等于height值
+    absolute元素：top：50%+margin-top负值(值为该元素高度的一半)
+    absolute元素：top：50%+transform: translateY（-50%)
+    absolute元素：有固定宽高度+top，left，bottom，right=0 + margin:auto
+  </text>
+</view>
+
+<view style="position: relative; border: 1rpx solid red; height: 100rpx;">
+  <view class="center_h_v_r_a" style="font-size: 26rpx;">relative盒子内的absolute盒子</view>
+</view>
+
+<view style="position: relative; border: 1rpx solid red; height: 100rpx;">
+  <view class="center_h_v_r_a" style="font-size: 26rpx; align-items: center; display: flex; flex-direction: column;">
+    <view style="width: 50rpx; height: 50rpx; background-color: rgb(57, 29, 212);"></view>
+    <text style="background-color: yellow;">水平垂直居中 column</text>
+  </view>
+</view>
+
+<view style="position: relative; border: 1rpx solid red; height: 100rpx;">
+  <view class="center_h_v_r_a" style="font-size: 26rpx; justify-content: center; align-items: center; display: flex;">
+    <view style="width: 50rpx; height: 50rpx; background-color: rgb(57, 29, 212);"></view>
+    <text style="background-color: yellow;">水平垂直居中 row</text>
+  </view>
+</view>
+
+<text> 知道盒子的宽度和高度</text>
+<view style="position: relative; border: 1rpx solid red; height: 100rpx;">
+  <view class="center_h_v_r_a_w_h" style="font-size: 26rpx;">relative盒子内的absolute盒子</view>
+</view>
+
+<view style="position: relative; border: 1rpx solid red; height: 100rpx;">
+  <view class="center_h_v_r_a_w_h2" style="font-size: 26rpx;">relative盒子内的absolute盒子 --2 </view>
+</view>
+
+
+<text> CSS3弹性布局（flex）</text>
+<view class="center_flex_v_h" style="background-color: wheat;">
+  <view style="font-size: 26rpx; background-color: violet;">CSS3弹性布局</view>
+</view>
+
+<text> CSS3弹性布局（flex）</text>
+<view class="center_flex_v_h" style="background-color: wheat; height: 40px;">
+  <view style="font-size: 26rpx; background-color: violet;">CSS3弹性布局</view>
+</view>
+
+<view class="center_flex_v_h" style="background-color: rgb(43, 13, 207);">
+  <view style="font-size: 26rpx; background-color: violet; display: flex; align-items: center;">
+    <view style="width: 30px; height: 40px; background-color: yellowgreen;"></view>
+    <view style="width: 30px; height: 30px; background-color: aqua;"></view>
+    <text style="background-color: yellow;">CSS3弹性布局（flex）</text>
+  </view>
+</view>
+
+<view class="center_flex_v_h" style="background-color: rgb(247, 17, 247);">
+  <view style="font-size: 26rpx; background-color: rgb(21, 11, 168); display: flex; align-items: center; flex-direction: column;">
+    <view style="width: 30px; height: 40px; background-color: yellowgreen;"></view>
+    <view style="width: 30px; height: 30px; background-color: aqua;"></view>
+    <text style="background-color: yellow;">CSS3弹性布局（flex）</text>
+  </view>
+</view>
+
+<view style="height: 30px;"></view>

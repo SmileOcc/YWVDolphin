@@ -1,0 +1,13 @@
+/* components/bottom-menu/bottom-menu.wxss */
+
+.bottom-menu-main {
+  background-color: hotpink;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  float: right;
+}

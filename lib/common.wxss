@@ -1,3 +1,57 @@
-page{
-  background-color: rgb(243, 232, 173);
+page {
+  background-color: rgb(179, 212, 231);
 }
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+
+/* *,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+
+/* 处理问题，小程序中连续符号和连续英文不换行 */
+.text_word_break_warp {
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+/* 文本自动换行 */
+.txt_word_break {
+  word-break: keep-all;
+  /* 或者是 break-all：允许在单词内断行 */
+}
+
+
+/* word-wrap属性表示当一个单词太长不能完全显示时，是否允许在单词内换行 */
+.txt_word_wrap {
+  word-wrap: break-word
+}
+
+/* 换行  */
+.text_rap {
+  white-space: pre-wrap;
+}
+
+.text_nowrap {
+  white-space: nowrap;
+}
+
+/* 换行 */
+.section_flex_warp {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 设置word-spacing属性来调整单词间的间距 */
+.text_word_space_03 {
+  word-spacing: 0.3em;
+}
+

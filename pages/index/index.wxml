@@ -1,10 +1,18 @@
 <!--index.wxml-->
 <view class="container">
+  <my-bottom-menu></my-bottom-menu>
+
   <!-- 顶部搜索栏 -->
   <view class="section searchBar">
-    <view class="section searBar-box {{isTap?'tap':''}}">
-      <image src="../../assets/icons/search.png" mode="aspectFill" class="search-icon" />
-      <input type="text" name="searchBar" disabled="true" placeholder="搜索商品" placeholder-class="search-plac" bindtap="toSearch" />
+    <view class="searBar-box {{isTap?'tap':''}}">
+      <view class="searBarCenter">
+        <image src="../../assets/icons/search.png" mode="aspectFill" class="search-icon11" />
+        <!-- <input type="text" name="searchBar" disabled="true" placeholder="搜索商品" placeholder-class="search-plac" class="searbar-text" bindtap="toSearch" /> -->
+
+        <text class="searbar-text">搜索商品</text>
+
+      </view>
+
     </view>
   </view><!-- end-section search searchBar -->
 
@@ -46,6 +54,26 @@
     </view>
   </block>
 
+  <view class="category_test">
+    <block wx:for="{{menu_list}}" wx:key="index">
+      <view class="category_test_bg" data-info="{{item}}" bind:tap="categoryTap">
+        <view class="category_test_item">
+          <image src="{{item.img}}"></image>
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 九宫格 -->
+  <view class="grid-list">
+    <view class="grid-item" wx:for="{{gridList}}" wx:key="id">
+      <image src="{{item.icon}}" mode="" />
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+
   <!-- 商品活动块 -->
   <view class="section activity">
     <view class="activity up" bind:tap="actionThemeActivity">
@@ -84,3 +112,4 @@
     <text>到底啦</text>
   </view>
 </view>
+

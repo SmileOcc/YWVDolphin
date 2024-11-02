@@ -1,0 +1,164 @@
+
+
+###网络请求：Axios
+
+### target 、 currentTarget
+如：A 上放了个小视图B，A绑定了事件，
+点击在B视图上时：target=B,currentTarget=A
+点击A视图上时：target=currentTarget=A
+
+如：A 上放了个小视图B，A绑定了事件，B也绑定了事件，触发B时，先响应B事件，在响应A事件
+
+####<block></block>
+注意： 并不是一个组件，它只是一个包裹性质的容器，不会在页面中做任何渲染，所以只会显示该组件内部的组件。
+
+
+#### wx:if 以动态创建和移除元素 的方式控制元素的展示与隐藏
+hidden 以切换样式的方式（display: none/block;），控制元素的显示与隐藏
+
+wx:if 之中的模板也可能包含数据绑定，所以当 wx:if 的条件值切换时，框架有一个局部渲染的过程，因为它会确保条件块在切换时销毁或重新渲染。
+  同时 wx:if 也是惰性的，如果在初始渲染条件为 false，框架什么也不做，在条件第一次变成真的时候才开始局部渲染。相比之下，hidden 就简单的多，组件始终会被渲染，只是简单的控制显示与隐藏。
+
+
+###wx:key 的使用
+
+  当数据改变触发渲染层重新渲染的时候，不带有 key 的组件会被重新创建，而不会重新排序，所以需要使用 wx:key 来指定列表中项目的唯一的标识符
+
+rpx（responsive pixel）是微信小程序独有的，用来解决屏适配的尺寸单位。
+
+
+
+当局部样式和全局样式冲突时，根据就近原则，局部样式会覆盖全局样式
+当局部样式的权重大于或等于全局样式的权重时，才会覆盖全局的样式
+
+
+###支持换行
+父节点：display:flex, flex-warp:warp,  子节点：flex-basis来控制每个子节点宽度
+
+text:换行 white-space:pre-warp
+
+
+###文本自动换行
+
+word-break 来控制文本换行时的行为
+需要注意的是，word-break 只能作用于块级元素
+
+上下两个text视图在一起，会合并在一起
+
+
+####box-sizing
+//padding + border + width= 盒子的宽度
+
+border-box
+描述：为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制
+
+content-box
+描述：在宽度和高度之外绘制元素的内边距和边框。
+
+inherit
+描述：继承 父元素 box-sizing属性的值
+
+
+###wx.switchTab（跳转主页）
+
+wx.switchTab 方法用于跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面，通常用于跳转到小程序的主页。url不能带参数
+
+思路就是通过storage来缓存数据, 跳转到指定页后获取storage, 并清除数据。 需要特别注意的是, 跳转到tabBar页面，并非关闭其他所有非tabBar的页面，跳转发生时 可能指定页面已经onLoad的情况下, 所以可以把获取参数的逻辑写在onShow里。
+
+或 
+<navigator url="/pages/expert/expert" open-type="switchTab">fasd</navigator>
+
+
+### wx.reLaunch（关闭所有页面跳转）
+wx.reLaunch 方法用于关闭所有页面，然后打开到应用内的某个页面。
+
+###wx.redirectTo（关闭当前页面跳转）
+wx.redirectTo 方法用于关闭当前页面，然后跳转到应用内的某个页面，但不允许跳转到 tabBar 页面。
+
+###wx.navigateTo（保留页面跳转）
+wx.navigateTo 方法用于保留当前页面，然后跳转到应用内的某个页面，但是不能跳转到 tabBar 页面。
+<navigator url="/pages/index/index">跳转到非narBar界面</navigator>
+
+<navigator url="/pages/list/list?name=zs&aeg=20">声明式导航-携带参数</navigator>
+
+
+
+
+###wx.navigateBack（页面返回）
+
+wx.navigateBack 方法用于关闭当前页面，返回上一页面或多级页面。
+delta：默认值为 1，表示返回的页面数。如果 delta 大于现有页面数，则返回到首页。
+
+特点： 关闭当前页面，返回上一页面或多级页面，可通过 getCurrentPages 获取当前的页面栈，决定需要返回几层。
+
+<navigator open-type='navigateBack' delta='1'>后退</navigator>
+
+
+wx.navigateBack({ delta:1 })
+
+
+
+### 加载 与刷新
+
+启用下拉刷新
+
+在页面的json文件中启用下拉刷新
+ "enablePullDownRefresh": true,
+  "backgroundColor": "#efefef",
+  "backgroundTextStyle":"dark"
+
+
+
+
+
+上拉触底加载下一页数据
+
+步骤： 1.在shoplist中的json中添加如下
+"onReachBottomDistance": 200
+
+在ts文件中
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom() {
+    this.setData({
+      page:this.data.page + 1
+    })
+    this.getShopList()
+  },
+
+
+  水平居中
+
+inline元素：text-align: center
+block元素：margin: 0 auto
+absolute元素：left: 50% + margin-left负值(值为该元素宽度的一半)
+absolute元素：left: 50% + transform: translateX（-50%)
+垂直居中
+
+inline元素：line-height的值等于height值
+absolute元素：top：50%+margin-top负值(值为该元素高度的一半)
+absolute元素：top：50%+transform: translateY（-50%)
+absolute元素：有固定宽高度+top，left，bottom，right=0 + margin:auto
+
+
+####水平垂直居中
+
+1. 放在定位是relative盒子内的absolute盒子：
+top: 50%;left: 50%;transform: translate(-50%,-50%);
+
+2. 知道盒子的宽度和高度
+top: 50%;left: 50%;
+加上
+margin-left负值(值为该元素宽度的一半);margin-top负值(值为该元素高度的一半)
+
+3. 放在定位是relative盒子内的absolute盒子且该盒子有固定宽高：
+top，left，bottom，right=0 + margin:auto
+
+
+4. CSS3弹性布局（flex）
+如果使用CSS3的弹性布局（flex）的话，问题就会变得容易多了。使用CSS3的弹性布局很简单，只要设置父元素设置成
+display:flex // flex布局
+align-items:center；// 元素水平居中
+justify-content:center；// 元素垂直居中

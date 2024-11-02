@@ -10,7 +10,8 @@
     "pages/activityList/activityList",
     "pages/activityDetail/activityDetail",
     "pages/mine/setting/setting",
-    "pages/goodsDetail/goodsDetail"
+    "pages/goodsDetail/goodsDetail",
+    "pages/mine/testLayout/textLayout"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -54,5 +55,8 @@
         "selectedIconPath": "assets/icons/mine_active.png"
       }
     ]
+  },
+  "usingComponents": {
+    "my-bottom-menu": "/components/bottom-menu/bottom-menu"
   }
 }

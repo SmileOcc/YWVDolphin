@@ -1,0 +1,19 @@
+<view class="bottom-menu-main">
+  <view class="drawer_screen" bindtap="showOrHide" wx:if="{{isShow}}" catchtouchmove="myCatchTouch"></view>
+  <view>
+    <view animation="{{animEnd}}" class="block">
+      <view wx:if="{{isShow}}" class="block-text" style="color:white;">队员招募</view>
+
+      <image src="/images/findMe.png" class=" small" bindtap="findTeam"></image>
+
+    </view>
+    <view animation="{{animDelLots}}" class="block">
+      <view wx:if="{{isShow}}" class="block-text" style="color:white;">寻找团队</view>
+
+      <image src="/images/findPer.png" class=" small" bindtap="findCaptain"></image>
+
+    </view>
+
+    <image src="/images/openIT.png" class="buttom" animation="{{animMain}}" bindtap="showOrHide"></image>
+  </view>
+</view>

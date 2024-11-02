@@ -1,5 +1,72 @@
 <!--pages/mine/setting/setting.wxml-->
-<view>
-<button plain="true" catch:tap="requestTest">网络请求</button>
-<button plain="true" catch:tap="requestTestt">网络请求</button>
+<view style="margin: 12px;">
+
+<navigator url="../testLayout/textLayout">layout</navigator>
+  <button plain="true" catch:tap="requestTest">网络请求</button>
+  <button plain="true" catch:tap="requestTestt">网络请求</button>
+
+
+  <button plain="true" catch:tap="requestTestt">target/currentTarget</button>
+  <view id="thisOut" class="view-click" bindtap="tabHandler">
+    <button id="thisIn" type="primary" bindtap="btnTabHandler" style="width: 150px;">CSH</button>
+  </view>
+
+  <input value="{{msg}}" bindinput="btnInput"></input>
+
+  <block wx:if="{{true}}">
+    <view hidden="{{flag}}">狂飙</view>
+    <view>我也要去卖鱼了</view>
+  </block>
+
+  <!-- 默认数组的当前项的下标变量名默认为 index，数组当前项的变量名默认为 item
+在列表渲染的过程中，可以通过使用 wx:for-index 可以指定当前循环项的索引的变量名 ，使用 wx:for-item 可以指定当前项的变量名 -->
+
+  <view wx:for="{{array}}">
+    当前篇数：{{index}} 当前学习天数：{{item}}
+  </view>
+  <view>----------------</view>
+  <view wx:for="{{array}}" wx:for-index="ids" wx:for-item="ids">
+    当前篇数：{{ids}} 当前学习天数：{{ids}}
+  </view>
+
+  <block wx:for="{{['好好学习','天天向上','各位大佬好']}}">
+    <view>{{index}}</view>
+    <view>{{item}}</view>
+  </block>
+
+  <text style="white-space: pre-wrap;">自动换行，大陆打卡了发来的了发来的翻到了放开我额就看到老师就打了放大了发多少但是</text>
+  <view></view>
+  <text style="word-break: keep-all;" class="text_word_space_03">自动换行，keep-all：不允许在单词内断行，在亚洲语言中比较常用 开我 额就 看到老 师就打了放大了发多少但是</text>
+
+<!-- 这个点击预览，手机扫码之后，长按就会出现效果，在模拟器上看不到效果 -->
+<view style="margin-top: 12px; background-color: rgb(141, 180, 180);">
+  手机号支持长按选中效果
+  <text user-select="true">123123434312</text>
+</view>
+
+  <!-- 通过 rich-text 组件的 nodes 属性节点，把 HTML 字符串渲染为对应的 UI结构 -->
+  <rich-text nodes="<h1 style='color:red'>标题 </h1>"></rich-text>
+
+
+  <view style="width: 200px; background-color: aqua;">
+    <text style="word-break: keep-all;" class="text_word_space_03">自动换行，</text>
+  </view>
+
+<!-- 通过type属性指定按钮颜色类型 -->
+<button>普通按钮</button>
+<button type="primary">主色调按钮</button>
+<button type="warn">警告按钮</button>
+<view></view>
+
+<!-- size="mini" -->
+<button size="mini">普通按钮</button>
+<button type="primary" size="mini">主色调按钮</button>
+<button type="warn" size="mini">警告按钮</button>
+<view></view>
+
+<!-- plain镂空按钮 -->
+<button size="mini" plain>普通按钮</button>
+<button type="primary" size="mini" plain>主色调按钮</button>
+<button type="warn" size="mini" plain>警告按钮</button>
+
 </view>

@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/mine/testLayout/textLayout",
+          "pathName": "pages/mine/testLayout/textLayout",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "testMarage",
           "pathName": "pages/other/testMarage/testMarage",
           "query": "",

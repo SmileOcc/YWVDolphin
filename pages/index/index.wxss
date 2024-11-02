@@ -1,40 +1,115 @@
 /**index.wxss**/
-.section{
+/* .section{
   width: 100%;
-}
+} */
 .searchBar{
   /* 它能够扩展和收缩 flex 容器内的元素，以最大限度地填充可用空间 */
-  display: flex;
+  /* display: flex; */
   /* justify-content属性定义了项目在主轴上的对齐方式 */
+  flex-direction: column;
   justify-content: center;
-  height: 100rpx;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  /* display: flex; */
   background: #8CC64A;
+  position: relative;
+
+  display: table-cell;
+  vertical-align: middle;
+
 }
-.searchBar .searBar-box{
-  display: inline-block;
+.searBar-box{
+  /* display: inline-block; */
   width: 95%;
-  height: 60rpx;
-  margin-top: 20rpx;
+  height: 40px;
+  
+  /* margin-top: 20rpx; */
   border-radius: 40rpx;
   background: #fff;
+  /* box-sizing: border-box; */
+
+  /* 水平居中 */
+  /* margin: 10rpx auto; */
+  /* text-align: center;
+  position: relative; */
+
+
+    /* //子控件垂直居中 */
+    align-items: center;
+    /* //子控件水平居中 */
+    justify-content: center;
+    text-align: center;
+
+    /* 方式二：水平垂直居中（方式二推荐）
+    父类控件：position: relative;
+    子类控件： */
+    /* position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    margin: auto; */
+
+    /* display: table-cell;
+    vertical-align: middle; */
+
+    margin:auto auto;
+}
+
+.search-icon11 {
+  background-color: blue;
+  width: 44rpx;
+  height: 44rpx;
+  text-align: center;
 }
 .searBar-box.tap{
   background: rgba(255,247,231,.9);
 }
+
+.searbar-text {
+  background-color: aqua;
+  font-size: 13px;
+  /* display: inline-block; */
+}
+
 .search-plac{
   text-align: center;
   font-size: 20rpx;
-  margin-top: 4rpx;
+  display: inline-block;
+
+  /* margin-top: 4rpx; */
   /* background-color: #ff4a00; */
 }
-.searBar-box .search-icon{
+/* .searBar-box .search-icon{
   position: absolute;
   left: 36%;
   top: 28rpx;
   width: 44rpx;
   height: 44rpx;
+} */
+
+.searBarCenter1 {
+  background-color: #0ddfb1;
+  height: 100%;
+  /* text-align: center; */
+  display: flex;
+  /* //子控件垂直居中 */
+  align-items: center;
+  /* //子控件水平居中 */
+  justify-content: center;
 }
 
+.searBarCenter .search-icon{
+  /* display: inline-block; */
+
+  /* position: relative; */
+  background-color: #c64a79;
+  /* left: 36%; */
+  /* top: rpx; */
+  width: 44rpx;
+  height: 44rpx;
+}
 
 
 .section-swiper .slide{
@@ -123,7 +198,7 @@
 
 /* 分类菜单 */
 .category_content {
-  background-color: #8CC64A;
+  background-color: #ddf8be;
   padding: 12px 0px;
   display: flex;
   flex-direction: row;
@@ -132,9 +207,9 @@
 }
 
 
+
 .category_item_bg {
   background-color: #ec6055;
-  
   width: calc(100% * 1 / 4.0);
   height: 86px;
 }
@@ -164,6 +239,92 @@
 .category_item text {
   font-size: 13;
   color: red;
+}
+
+.category_test{
+  background-color: rgb(9, 71, 112);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0rpx 26rpx;
+}
+
+
+
+
+
+.category_test_bg {
+  background-color: #55ec94;
+  /* width: calc(100% * 1 / 4.0); */
+  flex-basis: 25%;
+  height: 86px;
+  box-sizing: border-box;
+}
+
+/* 0 4 7 */
+.category_test_bg:nth-child(4n+1) {
+  background-color: #c64a79;
+}
+
+/* .category_test_bg:first-child {
+  background-color: #5131e0;
+} */
+
+.category_test_bg:not(:nth-child(3n)){
+  border: 2px solid rgba(40, 5, 238, 0.178);
+  }
+.category_test_item {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* padding: 8px 8px; */
+  box-sizing: border-box;
+}
+
+.category_test_item image {
+  /* background-color: rgb(10, 77, 10); */
+  height: 50px;
+  width: 100%;
+}
+
+.category_test_item text {
+  font-size: 13;
+  color: red;
+}
+
+/* 九宫格 */
+
+.grid-list{
+	display: flex;
+	flex-wrap: wrap;
+	border-top: 1px solid #efefef;
+	border-left: 1px solid #efefef;
+}
+.grid-item{
+	width: 33.3%;
+	height: 200rpx;
+
+	display: flex;
+	flex-direction: column;
+
+  /* 左右居中 */
+  align-items: center;
+  /* 上下居中 */
+	justify-content: center;
+
+	border-right: 1px solid #efefef;
+	border-bottom: 1px solid #efefef;
+
+	box-sizing: border-box;
+}
+.grid-item image{
+	width: 60rpx;
+	height: 60rpx;
+}
+.grid-item text{
+	font-size: 24rpx;
+	margin-top: 10rpx;
 }
 
 

@@ -1,0 +1,72 @@
+/* 水平居中
+
+inline元素：text-align: center
+block元素：margin: 0 auto
+absolute元素：left: 50% + margin-left负值(值为该元素宽度的一半)
+absolute元素：left: 50% + transform: translateX（-50%)
+垂直居中
+
+inline元素：line-height的值等于height值
+absolute元素：top：50%+margin-top负值(值为该元素高度的一半)
+absolute元素：top：50%+transform: translateY（-50%)
+absolute元素：有固定宽高度+top，left，bottom，right=0 + margin:auto */
+
+/* 水平垂直居中 */
+.center_h {
+  text-align: center;
+}
+
+/* 1. 放在定位是relative盒子内的absolute盒子： */
+.center_h_v_r_a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1rpx solid green;
+}
+
+/* 2. 知道盒子的宽度和高度
+top: 50%;left: 50%;
+加上
+margin-left负值(值为该元素宽度的一半);margin-top负值(值为该元素高度的一半). */
+
+.center_h_v_r_a_w_h {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300rpx;
+  height: 80rpx;
+  /* 上 右 下 左 */
+  margin: -40rpx 0 0 -150rpx;
+  /* margin-left: -150rpx;
+  margin-top: -40rpx; */
+  border: 1rpx solid green;
+}
+
+/* 3. 放在定位是relative盒子内的absolute盒子且该盒子有固定宽高：
+top，left，bottom，right=0 + margin:auto */
+
+.center_h_v_r_a_w_h2 {
+  background-color: hotpink;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1rpx solid green;
+  width: 250rpx;
+  height: 80rpx;
+}
+
+/* 4. CSS3弹性布局（flex）
+如果使用CSS3的弹性布局（flex）的话，问题就会变得容易多了。使用CSS3的弹性布局很简单，只要设置父元素设置成
+display:flex // flex布局
+align-items:center；// 元素水平居中
+justify-content:center；// 元素垂直居中 */
+
+.center_flex_v_h {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
