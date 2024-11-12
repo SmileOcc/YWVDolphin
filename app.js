@@ -8,6 +8,7 @@ App({
     Object.assign(this.globalData,mock)
     // console.log(this.globalData);
   },
+
   globalData: {
     userInfo: null
   }
